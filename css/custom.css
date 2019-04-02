@@ -1,0 +1,26 @@
+header{
+  background-color: #7acece;
+  padding: 20px 0;
+}
+
+header img{
+  width:100%;
+  max-width: 250px;
+}
+
+.pokemon-cards{
+  padding-top: 30px;
+}
+
+.pokemon-card{
+  padding: 15px;
+  margin-top: 10px;
+  -webkit-box-shadow: 1px 1px 8px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 1px 8px -1px rgba(0,0,0,0.75);
+  box-shadow: 1px 1px 8px -1px rgba(0,0,0,0.75);
+}
+
+.pokemon-card img{
+  width: 100%;
+}
+
