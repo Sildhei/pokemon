@@ -1,0 +1,81 @@
+{
+    "Pokemon": [
+        {
+            "name": "Bulbasaur",
+            "number": "001",
+            "type": [
+                "Grass",
+                "Poison"
+            ],
+            "Base stats": [
+                {
+                    "HP": 45,
+                    "Attack": 49,
+                    "Defense": 49,
+                    "SP Attack": 65,
+                    "SP Def.": 65,
+                    "Speed": 45
+                }
+            ],
+            "Evolutions": [
+                {
+                    "Ivysaur": "https://img.pokemondb.net/artwork/ivysaur.jpg",
+                    "Venusaur": "https://img.pokemondb.net/artwork/venasaur.jpg"
+                }
+            ],
+            "image": "https://img.pokemondb.net/artwork/bulbasaur.jpg"
+        },
+        {
+            "name": "Charmander",
+            "number": "004",
+            "type": [
+                "Fire"
+            ],
+            "Base stats": [
+                {
+                    "HP": 39,
+                    "Attack": 52,
+                    "Defense": 43,
+                    "SP Attack": 60,
+                    "SP Def.": 50,
+                    "Speed": 65
+                }
+            ],
+            "Evolutions": [
+                {
+                    "Charmeleon": "https://img.pokemondb.net/artwork/charmeleon.jpg",
+                    "Charizard": "https://img.pokemondb.net/artwork/charizard.jpg"
+                }
+            ],
+            "image": "https://img.pokemondb.net/artwork/charmander.jpg"
+        },
+        {
+            "name": "Squirtle",
+            "number": "007",
+            "type": [
+                "Water"
+            ],
+            "Base stats": [
+                {
+                    "HP": 44,
+                    "Attack": 48,
+                    "Defense": 65,
+                    "SP Attack": 50,
+                    "SP Def.": 64,
+                    "Speed": 43
+                }
+            ],
+            "Evolutions": [
+                {
+                    "Wartortle": "https://img.pokemondb.net/artwork/wartortle.jpg",
+                    "Blastoise": "https://img.pokemondb.net/artwork/blastoise.jpg"
+                }
+            ],
+            "image": "https://img.pokemondb.net/artwork/squirtle.jpg"
+        }
+    ]
+}
+
+
+
+b
