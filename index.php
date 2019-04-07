@@ -1,36 +1,60 @@
 <?php 
 include("header.php");
+$baseDeDatos = file_get_contents("data/pokemons.json");
+$pokemons = json_decode($baseDeDatos, true);
+$listado = $pokemons['Pokemon'];
 ?>
-
-
 
   <section>
     <article class="pokemon-cards">
       <div class="container">
-      <h1>Pokemons:</h1>
+      <h1>Pokemons:</h1>    
         <div class="row">
+        <?php
+        foreach ($listado as $pokemon){
+              ?>
+            
 
-            <div class="col-md-4">
+          <div class="col-md-4">
               <div class="pokemon-card">
-                <h3>Nombre pokemon<span>(Número)</span></h3>
-                <h4>Tipo</h4>
-                <img class="main-image" src="https://placehold.it/350x250" alt="Nombre pokemon">
+                <h3><?php echo $pokemon['name'] . '<span>' . '(' .  $pokemon['number'] .  ')' .'</span>' ?></h3>
+                <h4><?php 
+                foreach ($pokemon['type'] as $tipo){
+                echo $tipo . ' ';
+                }
+                ?></h4>
+                <img class="main-image" src=<?php echo $pokemon['image'] ?> alt="Nombre pokemon">
                 <ul class="specs">
                   <h4>Base stats:</h4>
-                  <li>tipo <span>numero</span></li>
+                  <?php
+                  foreach ($pokemon['Basestats'] as $stats){
+                    foreach ($stats as $habilidades){
+                  ?>
+                      <li><?php echo $habilidades[0] ?> <span><?php echo $habilidades[1] ?></span></li>
+                  <?php
+                  }
+                  ?>
+                  <?php
+                  }
+                  ?>
                 </ul>
                 <ul class="evolutions">
-                  <li>
-                    <h6>Nombre</h6>
-                  <img src="https://placehold.it/120x120" alt="nombre">
-                  </li>
-                  <li>
-                    <h6>Nombre</h6>
-                  <img src="https://placehold.it/120x120" alt="nombre">
-                  </li>
+                <?php
+                foreach ($pokemon['Evolutions'] as $evoluciones){
+                 ?>  
+                <li>
+                  <h6><?php echo $evoluciones['name'] ?></h6>
+                <img src=<?php echo $evoluciones['image'] ?> alt="nombre">
+                </li>
+                <?php
+                }
+               ?>
                 </ul>
               </div>
-            </div>
+            </div> 
+            <?php 
+        }
+        ?>
         </div>
       </div>
     </article>
