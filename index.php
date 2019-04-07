@@ -8,13 +8,12 @@ $listado = $pokemons['Pokemon'];
   <section>
     <article class="pokemon-cards">
       <div class="container">
-      <h1>Pokemons:</h1>    
+      <h1>Pokemons</h1>    
         <div class="row">
         <?php
         foreach ($listado as $pokemon){
               ?>
-            
-
+          
           <div class="col-md-4">
               <div class="pokemon-card">
                 <h3><?php echo $pokemon['name'] . '<span>' . '(' .  $pokemon['number'] .  ')' .'</span>' ?></h3>
@@ -23,9 +22,12 @@ $listado = $pokemons['Pokemon'];
                 echo $tipo . ' ';
                 }
                 ?></h4>
-                <img class="main-image" src=<?php echo $pokemon['image'] ?> alt="Nombre pokemon">
+                <div class="image-container">
+                  <img class="main-image" src=<?php echo $pokemon['image'] ?> alt="Nombre pokemon">
+                </div>
+                
                 <ul class="specs">
-                  <h4>Base stats:</h4>
+                  <h4 class="subtitle">Base stats:</h4>
                   <?php
                   foreach ($pokemon['Basestats'] as $stats){
                     foreach ($stats as $habilidades){
@@ -39,6 +41,7 @@ $listado = $pokemons['Pokemon'];
                   ?>
                 </ul>
                 <ul class="evolutions">
+                <h6 class="subtitle">Evolución</h6>
                 <?php
                 foreach ($pokemon['Evolutions'] as $evoluciones){
                  ?>  
