@@ -7,15 +7,11 @@
                 "Grass",
                 "Poison"
             ],
-            "Base stats": [
+            "Basestats": [
                 {
-                    "HP": 45,
-                    "Attack": 49,
-                    "Defense": 49,
-                    "SP Attack": 65,
-                    "SP Def.": 65,
-                    "Speed": 45
-                }
+                    "stat1":["HP", 45],
+                    "stat2":["Attack", 49]
+                  }
             ],
             "Evolutions": [
                 {
@@ -23,8 +19,8 @@
                     "image": "https://img.pokemondb.net/artwork/ivysaur.jpg"
                 },
                 {
-                    "name": "Venasaur",
-                    "image": "https://img.pokemondb.net/artwork/venasaur.jpg"
+                    "name": "Venusaur",
+                    "image": "https://img.pokemondb.net/artwork/venusaur.jpg"
                 }
             ],
             "image": "https://img.pokemondb.net/artwork/bulbasaur.jpg"
@@ -35,23 +31,19 @@
             "type": [
                 "Fire"
             ],
-            "Base stats": [
+            "Basestats": [
                 {
-                    "HP": 39,
-                    "Attack": 52,
-                    "Defense": 43,
-                    "SP Attack": 60,
-                    "SP Def.": 50,
-                    "Speed": 65
-                }
+                    "stat1":["HP", 39],
+                    "stat2":["Attack", 52]
+                  }
             ],
             "Evolutions": [
                 {
-                    "Name": "Charmeleon",
+                    "name": "Charmeleon",
                     "image": "https://img.pokemondb.net/artwork/charmeleon.jpg"
                 },
                 {
-                    "Name": "Charmeleon",
+                    "name": "Charizard",
                     "image": "https://img.pokemondb.net/artwork/charizard.jpg"
                 }
             ],
@@ -63,15 +55,11 @@
             "type": [
                 "Water"
             ],
-            "Base stats": [
+            "Basestats": [
                 {
-                    "HP": 44,
-                    "Attack": 48,
-                    "Defense": 65,
-                    "SP Attack": 50,
-                    "SP Def.": 64,
-                    "Speed": 43
-                }
+                    "stat1":["HP", 44],
+                    "stat2":["Attack", 48]
+                  }
             ],
             "Evolutions": [
                 {
