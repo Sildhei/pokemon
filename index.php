@@ -12,15 +12,23 @@ include("header.php");
 
             <div class="col-md-4">
               <div class="pokemon-card">
-                <h3>Nombre pokemon</h3>
-                <p>Descripción: lorem ipsum lorem </p>
-                <img src="https://placehold.it/350x250" alt="">
+                <h3>Nombre pokemon<span>(Número)</span></h3>
+                <h4>Tipo</h4>
+                <img class="main-image" src="https://placehold.it/350x250" alt="Nombre pokemon">
                 <ul class="specs">
-                  <h4>Ataques:</h4>
-                  <li>Ataque 1</li>
-                  <li>Ataque 2</li>
+                  <h4>Base stats:</h4>
+                  <li>tipo <span>numero</span></li>
                 </ul>
-                <h5>Se encuentra en la región de: <span><b> región </b></span></h5>
+                <ul class="evolutions">
+                  <li>
+                    <h6>Nombre</h6>
+                  <img src="https://placehold.it/120x120" alt="nombre">
+                  </li>
+                  <li>
+                    <h6>Nombre</h6>
+                  <img src="https://placehold.it/120x120" alt="nombre">
+                  </li>
+                </ul>
               </div>
             </div>
         </div>

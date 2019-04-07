@@ -8,6 +8,11 @@ header img{
   max-width: 250px;
 }
 
+ul{
+  list-style:none;
+  padding-left: 0;
+}
+
 .pokemon-cards{
   padding-top: 30px;
 }
@@ -20,7 +25,15 @@ header img{
   box-shadow: 1px 1px 8px -1px rgba(0,0,0,0.75);
 }
 
-.pokemon-card img{
+.pokemon-card .main-image{
   width: 100%;
+}
+
+.evolutions{
+  list-style: none;
+}
+
+.evolutions li{
+  display: inline-block;
 }
 
