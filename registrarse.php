@@ -16,7 +16,7 @@
         <div class="col-md-6 bg-left" style="background-image:url(https://wallpaperaccess.com/full/450122.jpg);background-position-x:50%;"></div>
         <div class="col-md-6">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png" class="logo-login" />
-          <form method="POST" action="login.php" class="login-form">
+          <form method="POST" action="registro.php" class="login-form">
           <h5>Registrarse</h5>
             <div class="form-group">
               <h6>Mail</h6> <input type="text" name="email" class="form-control">

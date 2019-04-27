@@ -11,7 +11,7 @@ $resultado = mysqli_query ($conexion, $solicitud);
     if($password==$datos['Pass']){
         $_SESSION['id']=$infouser['id'];
         $_SESSION['user']=$infouser['user'];
-        header("Location: index2.php");
+        header("Location: index.php");
     }
     else {
         echo '<script>alert("CONTRASEÑA INCORRECTA")</script>';
