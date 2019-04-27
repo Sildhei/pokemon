@@ -9,10 +9,10 @@ $resultado = mysqli_query ($conexion, $solicitud);
 
  if ($datos = mysqli_fetch_array ($resultado)){
     if($password==$datos['Pass']){
-        $_SESSION['id']=$infouser['id'];
-        $_SESSION['user']=$infouser['user'];
-        header("Location: index.php");
-    }
+        $_SESSION['id']=$datos['ID'];
+        $_SESSION['user']=$datos['User'];
+    header("Location: index.php");
+echo  $_SESSION['id']; }
     else {
         echo '<script>alert("CONTRASEÑA INCORRECTA")</script>';
         echo $pass; 

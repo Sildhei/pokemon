@@ -19,13 +19,13 @@
           <form method="POST" action="registro.php" class="login-form">
           <h5>Registrarse</h5>
             <div class="form-group">
-              <h6>Mail</h6> <input type="text" name="email" class="form-control">
+              <h6>Mail</h6> <input type="email" name="email" required class="form-control"> 
             </div>
             <div class="form-group">
               <h6>Nombre de usuario</h6> <input type="text" name="user" class="form-control">
             </div>
             <div class="form-group">
-              <h6>Contraseña</h6> <input type="text" name="password" class="form-control">
+              <h6>Contraseña</h6> <input type="password" name="password" class="form-control">
             </div>
             <div class="form-login-btns">
             <input type="Submit" name="Mandar" value="Mandar" class="btn btn-primary">

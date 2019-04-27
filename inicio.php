@@ -18,10 +18,10 @@
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png" class="logo-login"/>
         <form method="POST" action="login.php" class="login-form">
           <div class="form-group">
-            <h6>Mail</h6> <input type="text" name="email" class="form-control">
+            <h6>Mail</h6> <input type="email" name="email" required placeholder="email" class="form-control">
           </div>
           <div class="form-group">
-            <h6>Contraseña</h6> <input type="text" name="password" class="form-control">
+            <h6>Contraseña</h6> <input type="text" name="password" required class="form-control">
           </div>
           <div class="form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">

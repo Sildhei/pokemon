@@ -31,9 +31,11 @@ $resultado = mysqli_query($conexion, $solicitud);
               <ul class="specs">
                 <h4 class="subtitle">Base stats:</h4>
                 <li>
-                  <?php echo $datos['Stat1'] ?> <span><?php echo $datos['Valor1'] ?></span></li>
+                  <?php echo $datos['Stat1'] ?> <span><?php echo $datos['Valor1'] ?></span>
+                  </li>
                 <li>
-                  <?php echo $datos['Stat2'] ?> <span><?php echo $datos['Valor2'] ?></span></li>
+                  <?php echo $datos['Stat2'] ?> <span><?php echo $datos['Valor2'] ?></span>
+                  </li>
               </ul>
               <ul class="evolutions">
                 <h6 class="subtitle">Evolución</h6>
