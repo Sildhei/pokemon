@@ -1,68 +1,61 @@
-<?php 
+<?php
+session_start();
+if (@!$_SESSION['user']){
+    header("Location:inicio.php");
+}
 include("header.php");
-$baseDeDatos = file_get_contents("data/pokemons.json");
-$pokemons = json_decode($baseDeDatos, true);
-$listado = $pokemons['Pokemon'];
+include("conexionaDB.php");
+$solicitud = "SELECT * FROM pokemons";
+$resultado = mysqli_query($conexion, $solicitud);
 ?>
+<section>
+  <article class="pokemon-cards">
+    <div class="container">
+      <h1>Pokemons</h1>
 
-  <section>
-    <article class="pokemon-cards">
-      <div class="container">
-      <h1>Pokemons</h1>    
-        <div class="row">
+      <div class="row">
         <?php
-        foreach ($listado as $pokemon){
-              ?>
-          
+        while ($datos = mysqli_fetch_array($resultado)) {
+          ?>
           <div class="col-md-4">
-              <div class="pokemon-card">
-                <h3><?php echo $pokemon['name'] . '<span>' . '(' .  $pokemon['number'] .  ')' .'</span>' ?></h3>
-                <h4><?php 
-                foreach ($pokemon['type'] as $tipo){
-                echo $tipo . ' ';
-                }
-                ?></h4>
-                <div class="image-container">
-                  <img class="main-image" src=<?php echo $pokemon['image'] ?> alt="Nombre pokemon">
-                </div>
-                
-                <ul class="specs">
-                  <h4 class="subtitle">Base stats:</h4>
-                  <?php
-                  foreach ($pokemon['Basestats'] as $stats){
-                    foreach ($stats as $habilidades){
+            <div class="pokemon-card">
+              <h3><?php echo $datos['Nombre'] . '<span>' . '(' .  $datos['Numero'] .  ')' . '</span>' ?></h3>
+              <h4><?php
+                  echo $datos['Tipo1'] . ' ';
+                  echo $datos['Tipo2'] . ' ';
                   ?>
-                      <li><?php echo $habilidades[0] ?> <span><?php echo $habilidades[1] ?></span></li>
-                  <?php
-                  }
-                  ?>
-                  <?php
-                  }
-                  ?>
-                </ul>
-                <ul class="evolutions">
-                <h6 class="subtitle">Evolución</h6>
-                <?php
-                foreach ($pokemon['Evolutions'] as $evoluciones){
-                 ?>  
-                <li>
-                  <h6><?php echo $evoluciones['name'] ?></h6>
-                <img src=<?php echo $evoluciones['image'] ?> alt="nombre">
-                </li>
-                <?php
-                }
-               ?>
-                </ul>
+              </h4>
+              <div class="image-container">
+                <img class="main-image" src=<?php echo $datos['ImagenPoke'] ?> alt="Nombre pokemon">
               </div>
-            </div> 
-            <?php 
-        }
-        ?>
-        </div>
+              <ul class="specs">
+                <h4 class="subtitle">Base stats:</h4>
+                <li>
+                  <?php echo $datos['Stat1'] ?> <span><?php echo $datos['Valor1'] ?></span></li>
+                <li>
+                  <?php echo $datos['Stat2'] ?> <span><?php echo $datos['Valor2'] ?></span></li>
+              </ul>
+              <ul class="evolutions">
+                <h6 class="subtitle">Evolución</h6>
+                <li>
+                  <h6><?php echo $datos['Evolucion1'] ?></h6>
+                  <img src=<?php echo $datos['Imagen1'] ?> alt="nombre">
+                </li>
+                <li>
+                  <h6><?php echo $datos['Evolucion2'] ?></h6>
+                  <img src=<?php echo $datos['Imagen2'] ?> alt="nombre">
+                </li>
+              </ul>
+            </div>
+          </div>
+        <?php
+      }
+      ?>
       </div>
-    </article>
-  </section>
 
-  <?php 
+    </div>
+  </article>
+</section>
+<?php
 include("footer.php");
 ?>
